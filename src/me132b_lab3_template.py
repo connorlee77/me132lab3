@@ -55,7 +55,8 @@ class LidarOdometry():
         # Do your processing here, in the same way as the previous lab
         W = 0.23 / 2
         rho = 0.035
-
+        
+        # Compute wheel odometry
         right_enc = data.right_encoder*2.0*np.pi/2578.33
         left_enc = data.left_encoder*2.0*np.pi/2578.33
         dphi1 = right_enc - self.prev_right_encoder
